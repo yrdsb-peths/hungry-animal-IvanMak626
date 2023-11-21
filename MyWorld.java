@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * the world
  * 
- * @author (your name) 
+ * @author (Ivan Mak) 
  * @version (a version number or a date)
  */
 public class MyWorld extends World
@@ -18,6 +18,15 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         Elephant elephant = new Elephant();
-        addObject(elephant, 300, 300);
+        addObject(elephant, 300, 200);
+        
+        createApple();
+    }
+    
+    public void createApple(){
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple, x, y);
     }
 }
