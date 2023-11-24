@@ -1,5 +1,5 @@
 #Greenfoot project file
-class.Apple.image=apple1.png
+class.Apple.image=apple.png
 class.Elephant.image=elephant.png
 class.MyWorld.image=background.jpg
 dependency1.from=MyWorld
