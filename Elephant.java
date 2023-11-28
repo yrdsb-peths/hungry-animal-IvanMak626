@@ -83,5 +83,12 @@ public class Elephant extends Actor
                 world.increaseScore();
                 elephantSound.play();
             }
+            
+            if(isTouching(Speed.class))
+            {
+                removeTouching(Speed.class);
+                MyWorld worldOne = (MyWorld) getWorld();
+                worldOne.createSpeed();
+            }
         }
 }

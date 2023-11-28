@@ -6,12 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Ivan Mak) 
  * @version (a version number or a date)
  */
+
+
 public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
     int level = 1;
-    
+    Speed speed = new Speed();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -29,6 +31,8 @@ public class MyWorld extends World
         addObject(scoreLabel, 30, 40);
         // spawns a new apple
         createApple();
+        addObject(speed, Greenfoot.getRandomNumber(600), 0);
+        createSpeed();
     }
     
     /*
@@ -58,5 +62,27 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
+        
+    }
+    
+    
+
+    SimpleTimer lastAdded = new SimpleTimer();
+    public void createSpeed()
+    {
+        speed.setSpeed(2);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        
+        while(lastAdded.millisElapsed() < 3000)
+        {
+            System.out.println(lastAdded.millisElapsed());
+            if(lastAdded.millisElapsed() > 3000)
+            {
+                lastAdded.mark();
+                addObject(speed, x, y);
+                break;
+            }
+        }
     }
 }
