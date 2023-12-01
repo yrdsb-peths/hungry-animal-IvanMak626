@@ -12,7 +12,7 @@ public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
-    int level = 1;
+    int level = 2;
     Speed speed = new Speed();
     /**
      * Constructor for objects of class MyWorld.
@@ -70,19 +70,10 @@ public class MyWorld extends World
     SimpleTimer lastAdded = new SimpleTimer();
     public void createSpeed()
     {
-        speed.setSpeed(2);
+        speed.setSpeed(1);
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
+        addObject(speed, x, y);
         
-        while(lastAdded.millisElapsed() < 3000)
-        {
-            System.out.println(lastAdded.millisElapsed());
-            if(lastAdded.millisElapsed() > 3000)
-            {
-                lastAdded.mark();
-                addObject(speed, x, y);
-                break;
-            }
-        }
     }
 }

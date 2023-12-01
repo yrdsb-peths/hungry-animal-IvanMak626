@@ -11,6 +11,8 @@ public class Elephant extends Actor
     GreenfootImage[] idleRight = new GreenfootImage[8];
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     
+    int leftSpeed = -3;
+    int rightSpeed = 3;
     // direction elephant is facing
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
@@ -56,12 +58,18 @@ public class Elephant extends Actor
     
     public void act()
     {
+        if(animationTimer.millisElapsed() > 99)
+        {
+            leftSpeed = -3;
+            rightSpeed = 3;
+        }
+        
         if(Greenfoot.isKeyDown("a")){
-            move(-2);
+            move(leftSpeed);
             facing = "left";
         }
         else if(Greenfoot.isKeyDown("d")){
-            move(2);
+            move(rightSpeed);
             facing = "right";
         }
         
@@ -87,6 +95,8 @@ public class Elephant extends Actor
             if(isTouching(Speed.class))
             {
                 removeTouching(Speed.class);
+                leftSpeed = -10;
+                rightSpeed = 10;
                 MyWorld worldOne = (MyWorld) getWorld();
                 worldOne.createSpeed();
             }

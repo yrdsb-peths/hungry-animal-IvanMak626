@@ -20,13 +20,16 @@ C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\doc
 windows-1252
 -charset
 windows-1252
-C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\SimpleTimer.java
+C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\Elephant.java
 <---- end of javadoc command ---->
-Loading source file C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\SimpleTimer.java...
-C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\SimpleTimer.java:48: error: not a statement
-        lastMark = System.currentTimeMillis();cur
-                                              ^
-C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\SimpleTimer.java:48: error: ';' expected
-        lastMark = System.currentTimeMillis();cur
-                                                 ^
-2 errors
+Loading source file C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\Elephant.java...
+Constructing Javadoc information...
+warning: unknown enum constant Tag.Any
+  reason: class file for threadchecker.Tag not found
+warning: unknown enum constant Tag.Any
+Standard Doclet version 17.0.4.1+1
+Building tree for all the packages and classes...
+Generating C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\doc\Elephant.html...
+Generating C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\doc\package-summary.html...
+Generating C:\Users\danh7\OneDrive\Documents\GitHub\hungry-animal-IvanMak626\doc\index.html...
+2 warnings

@@ -8,16 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Speed extends Actor
 {
-    /**
-     * Act - do whatever the Speed wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    int speed = 2;
+    GreenfootImage speedImage = new GreenfootImage("images/gd 2x speed portal.png");
+    
+    int speed = 1;
     public void act()
     {
         int x = getX();
-        int y = getY() + 2;        
+        int y = getY()+1;
         setLocation(x, y);
+        speedImage.scale(50, 50);
+        setImage(speedImage);
         
         // remove apple and draw game over when apple gets to bottom
         MyWorld world = (MyWorld) getWorld();
