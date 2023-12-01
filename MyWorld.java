@@ -54,6 +54,13 @@ public class MyWorld extends World
         {
             level += 1;
         }
+        else if(score >= 20)
+        {
+            if(score % 10 == 0)
+            {
+                level += 1;
+            }
+        }
     }
     
     public void createApple(){

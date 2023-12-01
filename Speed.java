@@ -22,8 +22,8 @@ public class Speed extends Actor
         // remove apple and draw game over when apple gets to bottom
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight()){
-            world.gameOver();
             world.removeObject(this);
+            world.createSpeed();
         }
     }
     

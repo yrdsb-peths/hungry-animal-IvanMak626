@@ -3,6 +3,7 @@ class.Apple.image=apple.png
 class.Elephant.image=elephant_idle.png
 class.MyWorld.image=background.jpg
 class.Speed.image=gd\ 2x\ speed\ portal.png
+class.TitleScreen.image=corkboard.jpg
 dependency1.from=MyWorld
 dependency1.to=Label
 dependency1.type=UsesDependency

@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound  = new GreenfootSound("elephantcub.mp3");
+    GreenfootSound speedSound = new GreenfootSound("coin-upaif-14631.mp3");
     GreenfootImage[] idleRight = new GreenfootImage[8];
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     
@@ -55,10 +56,10 @@ public class Elephant extends Actor
         }
     }
     
-    
+    SimpleTimer speedTimer = new SimpleTimer();
     public void act()
     {
-        if(animationTimer.millisElapsed() > 99)
+        if(speedTimer.millisElapsed() > 2500)
         {
             leftSpeed = -3;
             rightSpeed = 3;
@@ -94,11 +95,13 @@ public class Elephant extends Actor
             
             if(isTouching(Speed.class))
             {
+                speedTimer.mark();
                 removeTouching(Speed.class);
-                leftSpeed = -10;
-                rightSpeed = 10;
+                leftSpeed = -5;
+                rightSpeed = 5;
                 MyWorld worldOne = (MyWorld) getWorld();
                 worldOne.createSpeed();
+                speedSound.play();
             }
         }
 }
