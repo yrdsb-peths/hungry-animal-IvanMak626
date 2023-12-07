@@ -7,8 +7,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Elephant extends Actor
 {
+    // Elephant sound
     GreenfootSound elephantSound  = new GreenfootSound("elephantcub.mp3");
+    // Speed Sound
     GreenfootSound speedSound = new GreenfootSound("coin-upaif-14631.mp3");
+    
+    // Animation Frames
     GreenfootImage[] idleRight = new GreenfootImage[8];
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     
@@ -19,12 +23,13 @@ public class Elephant extends Actor
     SimpleTimer animationTimer = new SimpleTimer();
     
     public Elephant(){
+        // Face Right Animation
         for(int i = 0; i < idleRight.length; i++)
         {
             idleRight[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
             idleRight[i].scale(100, 100);
         }
-        
+        // Face Left Animation
         for(int i = 0; i < idleLeft.length; i++)
         {
             idleLeft[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
@@ -84,6 +89,7 @@ public class Elephant extends Actor
          * Eat the apple and spawns a new apple if an apple is eaten
          */
         public void eat(){
+            // Eat Apple
             if(isTouching(Apple.class))
             {
                 removeTouching(Apple.class);
@@ -92,7 +98,7 @@ public class Elephant extends Actor
                 world.increaseScore();
                 elephantSound.play();
             }
-            
+            // Change Speed
             if(isTouching(Speed.class))
             {
                 speedTimer.mark();
